@@ -1,0 +1,14 @@
+# DESCRIPTION   This file has recommended module settings for
+#               GEOS-Chem/GCHP/HEMCO GCHP dependencies. It is
+#               meant to be used a custom scope for spack.
+
+modules:
+    default:
+        tcl:
+            naming_scheme: '{name}-{version}'
+            gcc:
+                environment:
+                    set:
+                        CC: 'gcc'
+                        CXX: 'g++'
+                        FC: 'gfortran'

@@ -1,0 +1,27 @@
+compilers:
+- compiler:
+    spec: gcc@10.2.0
+    paths:
+      cc: /n/sw/helmod-rocky8/apps/Core/gcc/10.2.0-fasrc01/bin/gcc
+      cxx: /n/sw/helmod-rocky8/apps/Core/gcc/10.2.0-fasrc01/bin/g++
+      f77: /n/sw/helmod-rocky8/apps/Core/gcc/10.2.0-fasrc01/bin/gfortran
+      fc: /n/sw/helmod-rocky8/apps/Core/gcc/10.2.0-fasrc01/bin/gfortran
+    flags: {}
+    operating_system: rocky8
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@12.2.0
+    paths:
+      cc: /n/sw/helmod-rocky8/apps/Core/gcc/12.2.0-fasrc01/bin/gcc
+      cxx: /n/sw/helmod-rocky8/apps/Core/gcc/12.2.0-fasrc01/bin/g++
+      f77: /n/sw/helmod-rocky8/apps/Core/gcc/12.2.0-fasrc01/bin/gfortran
+      fc: /n/sw/helmod-rocky8/apps/Core/gcc/12.2.0-fasrc01/bin/gfortran
+    flags: {}
+    operating_system: rocky8
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []

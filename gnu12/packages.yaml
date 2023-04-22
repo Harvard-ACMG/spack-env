@@ -1,0 +1,68 @@
+packages:
+  #
+  # Package specs for FASRC modules
+  #
+  cmake:
+    externals:
+      - spec: cmake@3.25.2
+        prefix: /n/sw/helmod-rocky8/apps/Core/cmake/3.25.2-fasrc01
+  gdb:
+    externals:
+      - spec: gdb@8.2.19
+        prefix: /usr/bin
+  hdf5:
+    externals:
+      - spec: hdf5@1.14.0
+        prefix: /n/sw/helmod-rocky8/apps/MPI/gcc/12.2.0-fasrc01/openmpi/4.1.4-fasrc01/hdf5/1.14.0-fasrc01
+  netcdf-c:
+    externals:
+      - spec: netcdf-c@4.9.2
+        prefix: /n/sw/helmod-rocky8/apps/MPI/gcc/12.2.0-fasrc01/openmpi/4.1.4-farc01/netcdf-c/4.9.2-fasrc01
+  netcdf-fortran:
+    externals:
+     - spec: netcdf-fortran@4.6.0
+       prefix: /n/sw/helmod-rocky8/apps/MPI/gcc/12.2.0-fasrc01/openmpi/4.1.4-fasrc01/netcdf-fortran/4.6.0-fasrc02
+  openmpi:
+    externals:
+      - spec: openmpi@4.1.4
+        prefix: /n/sw/helmod-rocky8/apps/Comp/gcc/12.2.0-fasrc01/openmpi/4.1.4-fasrc01
+  perl:
+    externals:
+      - spec: perl@5.26.3
+        prefix: /usr/bin       
+  szip:
+    externals:
+      - spec: szip@2.1.1
+        prefix: /n/sw/helmod-rocky8/apps/Core/szip/2.1.1-fasrc01
+  zlib:
+    externals:
+      - spec: zlib@1.2.13
+        prefix: /n/sw/helmod-rocky8/apps/Core/zlib/1.2.13-fasrc01
+  #
+  # Useful tools
+  #
+  cdo:
+    version: [2.1.0]
+    compiler: [gcc@12.2.0]
+  cgdb:
+    version: [0.7.1]
+    compiler: [gcc@12.2.0]
+  emacs:
+    version: [28.2]
+    variants: +gtk+X
+    compiler: [gcc@12.2.0]    
+  nco:
+    version: [5.1.4]
+    variants: ~doc
+    compiler: [gcc@12.2.0]
+  tau:
+    version: [2.32]
+    variants: ~otf2+openmp
+    compiler: [gcc@12.2.0]
+  #
+  # Settings for all Spack-built packages
+  #
+  all:
+    target: [x86_64]
+    providers:
+      mpi: [openmpi]

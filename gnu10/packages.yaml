@@ -1,0 +1,34 @@
+packages:
+  #
+  # Preferred compiler
+  #
+  openmpi:
+    externals:
+      -spec:
+      -prefix
+
+  cdo:
+    version: [2.1.1]
+    variants: ^hdf5~doc~mpi+hl+pic+shared+threadsafe
+    compiler: [gcc@10.2.0]
+  cgdb:
+    version: [0.7.1]
+    compiler: [gcc@10.2.0]
+  environment-modules:
+    version: [5.0.1]
+    compiler: [gcc@10.2.0]
+  gdb:
+    version: [9.2]
+    variants: ~python~xz
+    compiler: [gcc@10.2.0]
+  nco:
+    version: [5.1.4]
+    variants: ^hdf5~doc~mpi+hl+pic+shared+threadsafe
+    compiler: [gcc@10.2.0]
+  #
+  # Settings for all Spack-built packages
+  #
+  all:
+    target: [x86_64]
+    providers:
+      mpi: [openmpi]
