@@ -8,6 +8,7 @@ compilers:
       fc: /n/sw/helmod-rocky8/apps/Core/gcc/10.2.0-fasrc01/bin/gfortran
     operating_system: rocky8
     target: x86_64
+    flags: {}
     modules: []
     environment:
       prepend_path:
@@ -21,9 +22,9 @@ compilers:
       cxx: /usr/bin/g++
       f77: /usr/bin/gfortran
       fc: /usr/bin/gfortran
-    flags: {}
     operating_system: rocky8
     target: x86_64
+    flags: {}
     modules: []
     environment: {}
     extra_rpaths: []
@@ -36,6 +37,7 @@ compilers:
       fc: /n/sw/helmod-rocky8/apps/Core/gcc/12.2.0-fasrc01/bin/gfortran
     operating_system: rocky8
     target: x86_64
+    flags: {}
     modules: []
     environment:
       prepend_path:
