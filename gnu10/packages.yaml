@@ -1,29 +1,89 @@
 packages:
   #
-  # Preferred compiler
+  # Package specs for FASRC modules with GNU 10.2.0
   #
-  openmpi:
-    externals:
-      -spec:
-      -prefix
+  mpi:
+    buildable: False
 
+  cmake:
+    buildable: False
+    externals:
+      - spec: cmake@3.25.2
+        prefix: /n/sw/helmod-rocky8/apps/Core/cmake/3.25.2-fasrc01
+
+  gdb:
+    buildable: False
+    externals:
+      - spec: gdb@8.2.19
+        prefix: /usr/bin
+
+  hdf5:
+    buildable: False
+    externals:
+      - spec: hdf5@1.10.7
+        prefix: /n/sw/helmod-rocky8/apps/Comp/gcc/10.2.0-fasrc01/hdf5/1.10.7-fasrc01
+      - spec: openmpi@4.1.0
+        prefix: /n/sw/helmod-rocky8/apps/Comp/gcc/10.2.0-fasrc01/openmpi/4.1.0-fasrc01
+
+  netcdf-c:
+    buildable: False
+    externals:
+      - spec: netcdf-c@4.8.0
+        prefix: /n/sw/helmod-rocky8/apps/MPI/gcc/10.2.0-fasrc01/openmpi/4.1.0-fasrc01/netcdf-c/4.8.0-fasrc01
+      - spec: hdf5@1.10.7
+        prefix: /n/sw/helmod-rocky8/apps/Comp/gcc/10.2.0-fasrc01/hdf5/1.10.7-fasrc01
+
+  netcdf-fortran:
+    buildable: False
+    externals:
+      - spec: netcdf-fortran@4.5.3
+        prefix: n/sw/helmod-rocky8/apps/MPI/gcc/10.2.0-fasrc01/openmpi/4.1.0-fasrc01/netcdf-fortran/4.5.3-fasrc01
+      - spec: netcdf-c@4.8.0
+        prefix: /n/sw/helmod-rocky8/apps/MPI/gcc/10.2.0-fasrc01/openmpi/4.1.0-fasrc01/netcdf-c/4.8.0-fasrc01
+
+  openmpi:
+    buildable: False
+    externals:
+      - spec: openmpi@4.1.0
+        prefix: /n/sw/helmod-rocky8/apps/Comp/gcc/10.2.0-fasrc01/openmpi/4.1.0-fasrc01
+
+  perl:
+    buildable: False
+    externals:
+      - spec: perl@5.26.3
+        prefix: /usr/bin
+
+  szip:
+    buildable: False
+    externals:
+      - spec: szip@2.1.1
+        prefix: /n/sw/helmod-rocky8/apps/Core/szip/2.1.1-fasrc01
+
+  zlib:
+    buildable: False
+    externals:
+      - spec: zlib@1.2.13
+        prefix: /n/sw/helmod-rocky8/apps/Core/zlib/1.2.13-fasrc01
+  #
+  # Useful tools
+  #
   cdo:
-    version: [2.1.1]
-    variants: ^hdf5~doc~mpi+hl+pic+shared+threadsafe
+    version: [2.1.0]
     compiler: [gcc@10.2.0]
   cgdb:
     version: [0.7.1]
     compiler: [gcc@10.2.0]
-  environment-modules:
-    version: [5.0.1]
-    compiler: [gcc@10.2.0]
-  gdb:
-    version: [9.2]
-    variants: ~python~xz
+  emacs:
+    version: [28.2]
+    variants: +gtk+X
     compiler: [gcc@10.2.0]
   nco:
     version: [5.1.4]
-    variants: ^hdf5~doc~mpi+hl+pic+shared+threadsafe
+    variants: ~doc
+    compiler: [gcc@10.2.0]
+  tau:
+    version: [2.32]
+    variants: ~otf2+openmp
     compiler: [gcc@10.2.0]
   #
   # Settings for all Spack-built packages

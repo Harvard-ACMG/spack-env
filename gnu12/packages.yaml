@@ -1,40 +1,63 @@
 packages:
   #
-  # Package specs for FASRC modules
+  # Package specs for FASRC modules with GNU 12.2.0
   #
   cmake:
+    buildable: False
     externals:
       - spec: cmake@3.25.2
         prefix: /n/sw/helmod-rocky8/apps/Core/cmake/3.25.2-fasrc01
+
   gdb:
+    buildable: False
     externals:
       - spec: gdb@8.2.19
         prefix: /usr/bin
+
   hdf5:
+    buildable: False
     externals:
       - spec: hdf5@1.14.0
         prefix: /n/sw/helmod-rocky8/apps/MPI/gcc/12.2.0-fasrc01/openmpi/4.1.4-fasrc01/hdf5/1.14.0-fasrc01
+      - spec: openmpi@4.1.4
+        prefix: /n/sw/helmod-rocky8/apps/Comp/gcc/12.2.0-fasrc01/openmpi/4.1.4-fasrc01
+
   netcdf-c:
+    buildable: False
     externals:
       - spec: netcdf-c@4.9.2
         prefix: /n/sw/helmod-rocky8/apps/MPI/gcc/12.2.0-fasrc01/openmpi/4.1.4-farc01/netcdf-c/4.9.2-fasrc01
+      - spec: hdf5@1.14.0
+        prefix: /n/sw/helmod-rocky8/apps/MPI/gcc/12.2.0-fasrc01/openmpi/4.1.4-fasrc01/hdf5/1.14.0-fasrc01
+
   netcdf-fortran:
+    buildable: False
     externals:
      - spec: netcdf-fortran@4.6.0
        prefix: /n/sw/helmod-rocky8/apps/MPI/gcc/12.2.0-fasrc01/openmpi/4.1.4-fasrc01/netcdf-fortran/4.6.0-fasrc02
+    - spec: netcdf-c@4.9.2
+      prefix: /n/sw/helmod-rocky8/apps/MPI/gcc/12.2.0-fasrc01/openmpi/4.1.4-farc01/netcdf-c/4.9.2-fasrc01
+
   openmpi:
+    buildable: False
     externals:
       - spec: openmpi@4.1.4
         prefix: /n/sw/helmod-rocky8/apps/Comp/gcc/12.2.0-fasrc01/openmpi/4.1.4-fasrc01
+
   perl:
+    buildable: False
     externals:
       - spec: perl@5.26.3
-        prefix: /usr/bin       
+        prefix: /usr/bin
+
   szip:
+    buildable: False
     externals:
       - spec: szip@2.1.1
         prefix: /n/sw/helmod-rocky8/apps/Core/szip/2.1.1-fasrc01
+
   zlib:
+    buildable: False
     externals:
       - spec: zlib@1.2.13
         prefix: /n/sw/helmod-rocky8/apps/Core/zlib/1.2.13-fasrc01
@@ -50,7 +73,7 @@ packages:
   emacs:
     version: [28.2]
     variants: +gtk+X
-    compiler: [gcc@12.2.0]    
+    compiler: [gcc@12.2.0]
   nco:
     version: [5.1.4]
     variants: ~doc
