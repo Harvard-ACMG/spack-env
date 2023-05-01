@@ -6,28 +6,41 @@ This repository contains Spack configuration files for building packages on Cann
 
 Each of the folders listed below contains configuration files to build software with a different compiler version.  Add new folders for additional compilers as necessary.
 
+### shared
+
+Contains configuration files that can be shared by Spack builds using different compiler versions.
+
+`compilers.yaml`
+- Defines metadata about available compilers.
+
+`modules.yaml`
+- Specifies recipes for building module files with Spack.
+
 ### gnu10
 
 Contains configuration files for using Spack with the GNU Compiler Collection version 10.2.0 compiler on Cannon.
 
 `compilers.yaml`
-- Defines metadata about available compilers.
+- Symbolic link to `../shared/compilers.yaml`
 
 `modules.yaml`
-- Specifies recipes for building module files with Spack.
+- Symbolic link to `../shared/modules.yaml`
 
 `packages.yaml`
-- Specifies recipes for building packages with Spack w/ GNU 10.2.0 compilers.
+- Specifies recipes for building Spack packages with GNU 10.2.0 compilers.
 
 ### gnu12
 
-Contains configuration files for using Spack with the GNU Compiler Collection version 10.2.0 compiler on Cannon.
+Contains configuration files for using Spack with the GNU Compiler Collection version 12.2.0 compiler on Cannon.
 
 `compilers.yaml`
-- Defines metadata about available compilers.
+- Symbolic link to `../shared/compilers.yaml`
 
 `modules.yaml`
-- Specifies recipes for building module files with Spack.
+- Symbolic link to `../shared/modules.yaml`
+
+`packages.yaml`
+- Specifies recipes for building Spack packages with GNU 10.2.0 compilers.
 
 `packages.yaml`
 - Specifies recipes for building packages with Spack w/ GNU 12.2.0 compilers.

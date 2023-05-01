@@ -1,0 +1,105 @@
+# -------------------------------------------------------------------------
+# This modules.yaml file contains settings so that the Cannon Lmod
+# module system can find Spack-built modules.
+#
+# NOTE: Make sure that the path to Spack modules is placed in the
+# MODULEPATH environment varilables.  These are:
+#
+# /n/jacob_lab/Lab/seasfs01/Lab/RockyLinux/spack/share/spack/lmod/linux-rocky8-x86_64/gcc/10.2.0
+#
+# /n/jacob_lab/Lab/seasfs01/Lab/RockyLinux/spack/share/spack/lmod/linux-rocky8-x86_64/gcc/12.2.0
+# -------------------------------------------------------------------------
+modules:
+  #
+  # Settings used to generate modulefiles with Spack
+  #
+  prefix_inspections:
+    #
+    # This maps paths in the package install prefix to environment variables
+    # they should be added to. For example, <prefix>/bin should be in  PATH.
+    #
+    # NOTE: On Cannon, "module load" adds the path to where the Spack-built
+    # libraries are found (e.g. *.a *.so) to LD_LIBRARY_PATH, so that these
+    # libraries will be found when building software.  We do likewise for
+    # Spack-built modules here.
+    ./bin:
+      - PATH
+    ./man:
+      - MANPATH
+    ./share/man:
+      - MANPATH
+    ./share/aclocal:
+      - ACLOCAL_PATH
+    ./lib/pkgconfig:
+      - PKG_CONFIG_PATH
+    ./lib64/pkgconfig:
+      - PKG_CONFIG_PATH
+    ./share/pkgconfig:
+      - PKG_CONFIG_PATH
+    ./:
+      - CMAKE_PREFIX_PATH
+    ./lib:
+      - LD_LIBRARY_PATH
+    ./lib64:
+      - LD_LIBRARY_PATH
+  #
+  #
+  #
+  default:
+    #
+    # Default settings for Spack-built modules
+    #
+    enable::
+      #
+      # Enables Spack to use Lmod modules (note double colon!)
+      #
+      - lmod
+    roots:
+      #
+      # Path where Spack will create module files
+      #
+      lmod: $spack/share/spack/lmod
+    #
+    # Define settings for Lmod modules
+    #
+    lmod:
+      #
+      # Choose the naming convention for Spack-generated modulefiles
+      #
+      hash_length: 0
+      naming_scheme: '{name}/{version}-{compiler.name}-{compiler.version}'
+      projections:
+        all: '{name}/{version}-{compiler.name}-{compiler.version}'
+      #
+      #
+      #
+      all:
+        #
+        # Settings to apply to all Spack-built packages for use w/ Lmod
+        #
+        filter:
+          #
+          # Exclude these environment vars from module files
+          #
+          exclude_env_vars:
+            - 'CC'
+            - 'CXX'
+            - 'FC'
+            - 'F77'
+            - 'C_INCLUDE_PATH'
+            - 'CPLUS_INCLUDE_PATH'
+        environment:
+          #
+          # Environment settings to be applied at "module load"
+          #
+          set:
+            #
+            # Define convenience variables pointing to package folders
+            #
+            '{name}_HOME': '{prefix}'
+            '{name}_BIN':  '{prefix}/bin'
+            '{name}_LIB':  LIBRARY_PATH
+        #
+        # Automatically load dependent modules
+        #
+        autoload: direct
