@@ -93,9 +93,15 @@ packages:
     variants: "~doc"
     compiler: ["gcc@10.2.0"]
 
+  ncview:
+    version: ["2.1.8"]
+    require: ["netcdf-c@4.8.0"]
+    compiler: ["gcc@10.2.0"]
+
   tau:
     version: ["2.32"]
-    variants: "~otf2+openmp+papi+mpi"
+    require: ["openmpi@4.1.0"]
+    variants: "+openmp"
     compiler: ["gcc@10.2.0"]
   #
   # Settings for all Spack-built packages
