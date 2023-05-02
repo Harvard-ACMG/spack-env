@@ -1,0 +1,18 @@
+{
+    "access_right": "open",
+    "creators": [
+	{
+	    "name": "Robert M. Yantosca",
+	    "affiliation": "Harvard John A. Paulson Schoool of Engineering and Applied Sciences, Cambridge, MA, USA"
+	}
+    ],
+    "description": "spack-env: Spack configuration for RockyLinux",
+    "keywords": [
+	"rocky-linux",
+	"spack",
+	"software-libraries",
+	"software-builds"
+    ],
+    "license": "mit-license",
+    "upload_type": "software"
+}

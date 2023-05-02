@@ -1,3 +1,7 @@
+<a href="https://acmg.seas.harvard.edu"><img src="https://acmg.seas.harvard.edu/sites/projects.iq.harvard.edu/files/acmg/files/img_acmg_logo_small.png" height="200" width="187" alt="ACMG logo"></a>
+
+[![Latest Release](https://img.shields.io/github/v/release/Harvard-ACMG/spack-env?label=Latest%20Release)] (https://github.com/Harvard-ACMG/spack-env/releases) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4681204.svg)](https://doi.org/10.5281/zenodo.4681204) [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/Harvard-ACMG/spack-env/blob/main/LICENSE.txt)
+
 # spack-env
 
 This repository contains Spack configuration files for building packages on Cannon for the RockyLinux 8.7 operating system.
