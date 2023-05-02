@@ -97,8 +97,6 @@ modules:
             # Define convenience variables pointing to package folders
             #
             '{name}_HOME': '{prefix}'
-            '{name}_BIN':  '{prefix}/bin'
-            '{name}_LIB':  LIBRARY_PATH
         #
         # Automatically load dependent modules
         #
