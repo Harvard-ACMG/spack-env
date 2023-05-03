@@ -1,4 +1,4 @@
-#============================================================================
+#############################################################################
 # gnu10/packages.yaml:
 #
 # Defines package specs for externally-built FASRC modules and for
@@ -8,7 +8,7 @@
 # again, which can cause issues with compiling GEOS-Chem and GCHP.
 #
 #  -- Bob Yantosca (01 May 2023)
-#============================================================================
+#############################################################################
 
 packages:
   #
@@ -98,10 +98,13 @@ packages:
     require: ["netcdf-c@4.8.0"]
     compiler: ["gcc@10.2.0"]
 
+  openjdk:
+    version: ["11.0.17_8"]
+    compiler: ["gcc@10.2.0"]
+
   tau:
     version: ["2.32"]
-    require: ["openmpi@4.1.0"]
-    variants: "+openmp"
+    variants: "+openmp+ompt+pthread"
     compiler: ["gcc@10.2.0"]
   #
   # Settings for all Spack-built packages

@@ -98,10 +98,13 @@ packages:
     require: ["netcdf-c@4.9.2"]
     compiler: ["gcc@12.2.0"]
 
+  openjdk:
+    version: ["11.0.17_8"]
+    compiler: ["gcc@12.2.0"]
+
   tau:
     version: ["2.32"]
-    require: ["openmpi@4.1.0"]
-    variants: "+openmp"
+    variants: "+openmp+ompt+pthread"
     compiler: ["gcc@12.2.0"]
   #
   # Settings for all Spack-built packages
