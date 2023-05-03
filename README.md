@@ -1,6 +1,8 @@
 <a href="https://acmg.seas.harvard.edu"><img src="https://acmg.seas.harvard.edu/sites/projects.iq.harvard.edu/files/acmg/files/img_acmg_logo_small.png" width="200" height="187" alt="ACMG logo"></a>
 
-[![Latest Release](https://img.shields.io/github/v/release/Harvard-ACMG/spack-env?label=Latest%20Release)](https://github.com/Harvard-ACMG/spack-env/releases) [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/Harvard-ACMG/spack-env/blob/main/LICENSE.txt)
+[![Latest
+Release](https://img.shields.io/github/v/release/Harvard-ACMG/spack-env?label=Latest%20Release)](https://github.com/Harvard-ACMG/spack-env/releases) [![Release
+Date](https://img.shields.io/github/release-date/Harvard-ACMG/spack-env)](https://github.com/Harvard-ACMG/spack-env/releases/) [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/Harvard-ACMG/spack-env/blob/main/LICENSE.txt)
 
 # spack-env
 
