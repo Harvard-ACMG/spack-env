@@ -73,7 +73,7 @@ packages:
   #
   cdo:
     version: ["2.1.0"]
-    require: ["netcdf-c@4.8.0", "zlib@1.2.11"]
+    require: ["netcdf-c@4.8.0", "zlib@1.2.11", "hdf5@1.10.7"]
     variants: "~doc~proj"
     compiler: ["gcc@10.2.0"]
 

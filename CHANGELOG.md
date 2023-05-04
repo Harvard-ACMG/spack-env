@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [0.1.3]
 ### Changed
 - Expanded usage instructions in `README.md`
+- Added `hdf5@1.10.7` to `require` list for `cdo` in `gnu10/packages.yaml`
+- Added `hdf5@1.14.0` to `require` list for `cdo` in `gnu12/packages.yaml`
 
 ## [0.1.2]
 ### Added
