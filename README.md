@@ -72,22 +72,6 @@ or to load the GNU 12 compilers and relevant libraries, use this command:
 source /path/to/cannon-env/envs/gcclassic.rocky+gnu12.nospack.env
 ```
 
-## Customize package files before building software
-
-Before you start building software packages with Spack, make sure to make the following edits:
-
-### Edit the `package.py` file for cdo
-
-Add the following code into the `$SPACK_ROOT/var/spack/repos/builtin/packages/cdo/packages.py file:
-
-```python
-# Also need to tell CDO do depend on the MPI library
-# if HDF5 is selected (Bob Yantosca, 04 May 2023)
-depends_on("mpi", when="+hdf5")
-```
-
-This is necessary in order to avoid deactivating the netCDF-Fortran module when the CDO (Climate Data Operators) module is loaded.
-
 ## Build software packages with Spack
 
 To build software with Spack using the customizations contained in this repository, follow these commands:
