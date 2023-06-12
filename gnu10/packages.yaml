@@ -51,6 +51,12 @@ packages:
       - spec: "openmpi@4.1.0"
         prefix: "/n/sw/helmod-rocky8/apps/Comp/gcc/10.2.0-fasrc01/openmpi/4.1.0-fasrc01"
 
+  openssl:
+    buildable: False
+    externals:
+      - spec: "openssl@1.1.1k"
+        prefix: "/usr/bin/openssl"
+
   perl:
     buildable: False
     externals:
@@ -102,9 +108,14 @@ packages:
     version: ["11.0.17_8"]
     compiler: ["gcc@10.2.0"]
 
+  # NOTE: Variants are from the successful install on CentOS7
   tau:
-    version: ["2.32"]
-    variants: "+openmp+ompt+pthread"
+    version: ["2.31"]
+    variants: "~adios2+binutils~comm~craycnl~cuda+elf+fortran~gasnet+io~level_zero+libdwarf+libunwind~likwid~mpi+ompt~opari~opencl+openmp+otf2+papi+pdt~phase~ppc64le~profileparam+pthreads~python~rocm~rocprofiler~roctracer~scorep~shmem~sqlite~x86_64"
+    compiler: ["gcc@10.2.0"]
+
+  xterm:
+    version: ["353"]
     compiler: ["gcc@10.2.0"]
   #
   # Settings for all Spack-built packages

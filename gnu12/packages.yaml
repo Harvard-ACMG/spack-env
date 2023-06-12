@@ -51,6 +51,12 @@ packages:
       - spec: "openmpi@4.1.4"
         prefix: "/n/sw/helmod-rocky8/apps/Comp/gcc/12.2.0-fasrc01/openmpi/4.1.4-fasrc01"
 
+  openssl:
+    buildable: False
+    externals:
+      - spec: "openssl@1.1.1k"
+        prefix: "/usr/bin/openssl"
+
   perl:
     buildable: False
     externals:
@@ -105,6 +111,10 @@ packages:
   tau:
     version: ["2.32"]
     variants: "+openmp+ompt+pthread"
+    compiler: ["gcc@12.2.0"]
+
+  xterm:
+    version: ["353"]
     compiler: ["gcc@12.2.0"]
   #
   # Settings for all Spack-built packages
