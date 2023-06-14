@@ -7,7 +7,7 @@
 # Settings will prevent Spack from trying to rebuild FASRC modules
 # again, which can cause issues with compiling GEOS-Chem and GCHP.
 #
-#  -- Bob Yantosca (01 May 2023)
+#  -- Bob Yantosca (14 Jun 2023)
 #############################################################################
 
 packages:
@@ -55,7 +55,7 @@ packages:
     buildable: False
     externals:
       - spec: "openssl@1.1.1k"
-        prefix: "/usr/bin/openssl"
+        prefix: "/usr/bin"
 
   perl:
     buildable: False
@@ -93,6 +93,10 @@ packages:
     variants: "+gtk+X"
     compiler: ["gcc@10.2.0"]
 
+  jq:
+    version: ["1.6"]
+    compiler: ["gcc@10.2.0"]
+
   nco:
     version: ["5.1.4"]
     require: ["netcdf-c@4.8.0"]
@@ -108,7 +112,13 @@ packages:
     version: ["11.0.17_8"]
     compiler: ["gcc@10.2.0"]
 
+  parallel:
+    version: ["20220522"]
+    compiler: ["gcc@10.2.0"]
+
   # NOTE: Variants are from the successful install on CentOS7
+  # But this presently does not produce a working TAU executable.
+  #  -- Bob Yantosca (14 Jun 2023)
   tau:
     version: ["2.31"]
     variants: "~adios2+binutils~comm~craycnl~cuda+elf+fortran~gasnet+io~level_zero+libdwarf+libunwind~likwid~mpi+ompt~opari~opencl+openmp+otf2+papi+pdt~phase~ppc64le~profileparam+pthreads~python~rocm~rocprofiler~roctracer~scorep~shmem~sqlite~x86_64"
