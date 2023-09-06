@@ -1,19 +1,16 @@
 compilers:
 - compiler:
-    spec: gcc@10.2.0
+    spec: clang@14.0.6
     paths:
-      cc: /n/sw/helmod-rocky8/apps/Core/gcc/10.2.0-fasrc01/bin/gcc
-      cxx: /n/sw/helmod-rocky8/apps/Core/gcc/10.2.0-fasrc01/bin/g++
-      f77: /n/sw/helmod-rocky8/apps/Core/gcc/10.2.0-fasrc01/bin/gfortran
-      fc: /n/sw/helmod-rocky8/apps/Core/gcc/10.2.0-fasrc01/bin/gfortran
+      cc: /usr/bin/clang
+      cxx: /usr/bin/clang++
+      f77: null
+      fc: null
+    flags: {}
     operating_system: rocky8
     target: x86_64
-    flags: {}
     modules: []
-    environment:
-      prepend_path:
-        LIBRARY_PATH: /n/sw/helmod-rocky8/apps/Core/mpfr/4.1.0-fasrc01/lib64
-        LD_LIBRARY_PATH: /n/sw/helmod-rocky8/apps/Core/mpfr/4.1.0-fasrc01/lib64
+    environment: {}
     extra_rpaths: []
 - compiler:
     spec: gcc@8.5.0
@@ -22,25 +19,22 @@ compilers:
       cxx: /usr/bin/g++
       f77: /usr/bin/gfortran
       fc: /usr/bin/gfortran
+    flags: {}
     operating_system: rocky8
     target: x86_64
-    flags: {}
     modules: []
     environment: {}
     extra_rpaths: []
 - compiler:
-    spec: gcc@12.2.0
+    spec: gcc@10.2.0
     paths:
-      cc: /n/sw/helmod-rocky8/apps/Core/gcc/12.2.0-fasrc01/bin/gcc
-      cxx: /n/sw/helmod-rocky8/apps/Core/gcc/12.2.0-fasrc01/bin/g++
-      f77: /n/sw/helmod-rocky8/apps/Core/gcc/12.2.0-fasrc01/bin/gfortran
-      fc: /n/sw/helmod-rocky8/apps/Core/gcc/12.2.0-fasrc01/bin/gfortran
+      cc: /n/sw/helmod-rocky8/apps/Core/gcc/10.2.0-fasrc01/bin/gcc
+      cxx: /n/sw/helmod-rocky8/apps/Core/gcc/10.2.0-fasrc01/bin/g++
+      f77: /n/sw/helmod-rocky8/apps/Core/gcc/10.2.0-fasrc01/bin/gfortran
+      fc: /n/sw/helmod-rocky8/apps/Core/gcc/10.2.0-fasrc01/bin/gfortran
+    flags: {}
     operating_system: rocky8
     target: x86_64
-    flags: {}
     modules: []
-    environment:
-      prepend_path:
-        LIBRARY_PATH: /n/sw/helmod-rocky8/apps/Core/mpfr/4.2.0-fasrc01/lib64
-        LD_LIBRARY_PATH: /n/sw/helmod-rocky8/apps/Core/mpfr/4.2.0-fasrc01/lib64
+    environment: {}
     extra_rpaths: []

@@ -5,9 +5,9 @@
 # NOTE: Make sure that the path to Spack modules is placed in the
 # MODULEPATH environment varilables.  These are:
 #
-# /n/jacob_lab/Lab/seasfs01/Lab/RockyLinux/spack/share/spack/lmod/linux-rocky8-x86_64/gcc/10.2.0
+# /n/jacob_lab/Lab/RockyLinux/spack/share/spack/lmod/linux-rocky8-x86_64/gcc/10.2.0
 #
-# /n/jacob_lab/Lab/seasfs01/Lab/RockyLinux/spack/share/spack/lmod/linux-rocky8-x86_64/gcc/12.2.0
+# /n/jacob_lab/Lab/RockyLinux/spack/share/spack/lmod/linux-rocky8-x86_64/gcc/12.2.0
 # -------------------------------------------------------------------------
 modules:
   #

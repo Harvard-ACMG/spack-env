@@ -7,7 +7,7 @@
 # Settings will prevent Spack from trying to rebuild FASRC modules
 # again, which can cause issues with compiling GEOS-Chem and GCHP.
 #
-#  -- Bob Yantosca (14 Jun 2023)
+#  -- Bob Yantosca (06 Sep 2023)
 #############################################################################
 
 packages:
@@ -15,6 +15,12 @@ packages:
   # Specs for FASRC-built modules.  These will be assigned "Spack-like"
   # specs (e.g. netcdf-c/4.8.0-fasrc01 => netcdf-c/4.8.0-gcc-10.2.0).
   #
+  bison:
+    buildable: False
+    externals:
+      - spec: "bison@3.0.4"
+        prefix: "/usr/bin"
+
   cmake:
     buildable: False
     externals:
@@ -88,6 +94,10 @@ packages:
     require: "gdb"
     compiler: ["gcc@10.2.0"]
 
+  colordiff:
+    version: ["1.0.21"]
+    compiler: ["gcc@10.2.0"]
+  
   emacs:
     version: ["28.2"]
     variants: "+gtk+X"
@@ -116,6 +126,10 @@ packages:
     version: ["20220522"]
     compiler: ["gcc@10.2.0"]
 
+  readline:
+    version: ["8.2"]
+    compiler: ["gcc@10.2.0"]
+  
   # NOTE: Variants are from the successful install on CentOS7
   # But this presently does not produce a working TAU executable.
   #  -- Bob Yantosca (14 Jun 2023)
