@@ -9,10 +9,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Add spec for `bison@3.0.4` in the `gnu*/packages.yaml` files
 - Add spec for `colordiff@1.0.21` in the `gnu*/packages.yaml` files
 - Add spec for `readline@8.2` in the the `gnu*/packages.yaml` files
+- Added `gnu10/setup.sh` and `gnu12/setup.sh` scripts
 
 ### Changed
 - Updated `shared/compilers.yaml` with the latest output of `spack compiler find`
 - Updated comments in `shared/modules.yaml`
+- Updated `README.md` instructions to use one of the `setup.sh` scripts
 
 ## [0.1.3]
 ### Added

@@ -46,9 +46,7 @@ Contains configuration files for using Spack with the GNU Compiler Collection ve
 To build software with Spack using these customizations, follow these commands:
 
 ```console
-$ cd /n/jacob_lab/Lab/seasfs01/Lab/RockyLinux
-
-$ . spack/share/spack/setup-env.sh                        # do this only once at startup
+source spack-env/<build-spec>/setup.sh
 
 $ spack -C spack-env/<build-spec> install <package-name>
 ```
