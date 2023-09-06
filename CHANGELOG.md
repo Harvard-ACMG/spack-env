@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 - Updated `shared/compilers.yaml` with the latest output of `spack compiler find`
+- Updated comments in `shared/modules.yaml`
 
 ## [0.1.3]
 ### Added
