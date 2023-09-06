@@ -36,7 +36,10 @@ compilers:
     operating_system: rocky8
     target: x86_64
     modules: []
-    environment: {}
+    environment:
+      prepend_path:
+        LIBRARY_PATH: /n/sw/helmod-rocky8/apps/Core/mpfr/4.1.0-fasrc01/lib64
+        LD_LIBRARY_PATH: /n/sw/helmod-rocky8/apps/Core/mpfr/4.1.0-fasrc01/lib64
     extra_rpaths: []
 - compiler:
     spec: gcc@12.2.0
@@ -49,5 +52,8 @@ compilers:
     operating_system: rocky8
     target: x86_64
     modules: []
-    environment: {}
+    environment:
+      prepend_path:
+        LIBRARY_PATH: /n/sw/helmod-rocky8/apps/Core/mpfr/4.2.0-fasrc01/lib64
+        LD_LIBRARY_PATH: /n/sw/helmod-rocky8/apps/Core/mpfr/4.2.0-fasrc01/lib64
     extra_rpaths: []
