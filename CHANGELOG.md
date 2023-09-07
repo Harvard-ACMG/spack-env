@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Updated `shared/compilers.yaml` with the latest output of `spack compiler find`
 - Updated comments in `shared/modules.yaml`
 - Updated `README.md` instructions to use one of the `setup.sh` scripts
+- Some packages now are built with the Core compiler (`gcc@8.5.0`)
 
 ## [0.1.3]
 ### Added
