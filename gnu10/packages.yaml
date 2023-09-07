@@ -7,7 +7,7 @@
 # Settings will prevent Spack from trying to rebuild FASRC modules
 # again, which can cause issues with compiling GEOS-Chem and GCHP.
 #
-#  -- Bob Yantosca (06 Sep 2023)
+#  -- Bob Yantosca (07 Sep 2023)
 #############################################################################
 
 packages:
@@ -81,7 +81,32 @@ packages:
       - spec: "zlib@1.2.11"
         prefix: "/n/sw/helmod-rocky8/apps/Core/zlib/1.2.11-fasrc01"
   #
-  # Specs for modules that will be built with Spack
+  # Specs for packages that will be built with Spack.
+  # These can be built with the Core compiler, gcc@8.5.0
+  #
+  colordiff:
+    version: ["1.0.21"]
+    compiler: ["gcc@8.5.0"]
+
+  emacs:
+    version: ["28.2"]
+    variants: "+gtk+X"
+    compiler: ["gcc@8.5.0"]
+
+  jq:
+    version: ["1.6"]
+    compiler: ["gcc@8.5.0"]
+
+  openjdk:
+    version: ["11.0.17_8"]
+    compiler: ["gcc@8.5.0"]
+
+  parallel:
+    version: ["20220522"]
+    compiler: ["gcc@8.5.0"]
+  #
+  # Specs for packages that will be built with Spack.
+  # These must be with gcc@10.2.0.
   #
   cdo:
     version: ["2.1.0"]
@@ -92,19 +117,6 @@ packages:
   cgdb:
     version: ["0.7.1"]
     require: "gdb"
-    compiler: ["gcc@10.2.0"]
-
-  colordiff:
-    version: ["1.0.21"]
-    compiler: ["gcc@10.2.0"]
-  
-  emacs:
-    version: ["28.2"]
-    variants: "+gtk+X"
-    compiler: ["gcc@10.2.0"]
-
-  jq:
-    version: ["1.6"]
     compiler: ["gcc@10.2.0"]
 
   nco:
@@ -118,28 +130,16 @@ packages:
     require: ["netcdf-c@4.8.0"]
     compiler: ["gcc@10.2.0"]
 
-  openjdk:
-    version: ["11.0.17_8"]
-    compiler: ["gcc@10.2.0"]
-
-  parallel:
-    version: ["20220522"]
-    compiler: ["gcc@10.2.0"]
-
   readline:
     version: ["8.2"]
     compiler: ["gcc@10.2.0"]
-  
+  #
   # NOTE: Variants are from the successful install on CentOS7
   # But this presently does not produce a working TAU executable.
   #  -- Bob Yantosca (14 Jun 2023)
   tau:
     version: ["2.31"]
     variants: "~adios2+binutils~comm~craycnl~cuda+elf+fortran~gasnet+io~level_zero+libdwarf+libunwind~likwid~mpi+ompt~opari~opencl+openmp+otf2+papi+pdt~phase~ppc64le~profileparam+pthreads~python~rocm~rocprofiler~roctracer~scorep~shmem~sqlite~x86_64"
-    compiler: ["gcc@10.2.0"]
-
-  xterm:
-    version: ["353"]
     compiler: ["gcc@10.2.0"]
   #
   # Settings for all Spack-built packages
