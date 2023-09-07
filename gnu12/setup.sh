@@ -21,7 +21,7 @@ if [[ ! "spack" =~ "${MODULEPATH}" ]]; then
 	echo "... Updating module paths, please wait ..."
     fi
     export SPACK_MODULE_ROOT="${SPACK_ROOT}/share/spack/lmod/linux-rocky8-x86_64"
-    export MODULEPATH+=":${SPACK_MODULE_ROOT}/gcc/8.5.0"
+    export MODULEPATH+=":${SPACK_MODULE_ROOT}/Core"
     export MODULEPATH+=":${SPACK_MODULE_ROOT}/gcc/10.2.0"
     export MODULEPATH+=":${SPACK_MODULE_ROOT}/openmpi/4.1.0-62i34f7/gcc/10.2.0"
     export MODULEPATH+=":${SPACK_MODULE_ROOT}/gcc/12.2.0"
