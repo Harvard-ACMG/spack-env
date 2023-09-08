@@ -104,10 +104,6 @@ packages:
   parallel:
     version: ["20220522"]
     compiler: ["gcc@8.5.0"]
-
-  readline:
-    version: ["8.2"]
-    compiler: ["gcc@8.5.0"]
   #
   # Specs for packages that will be built with Spack.
   # These must be with gcc@12.2.0.
@@ -132,6 +128,10 @@ packages:
   ncview:
     version: ["2.1.8"]
     require: ["netcdf-c@4.9.2"]
+    compiler: ["gcc@12.2.0"]
+
+  readline:
+    version: ["8.2"]
     compiler: ["gcc@12.2.0"]
 
   tau:
