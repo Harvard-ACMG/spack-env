@@ -90,8 +90,11 @@ packages:
 
   emacs:
     version: ["28.2"]
-    variants: "+gtk+X"
+    variants: "+athena+X"     # NOTE: Builds with the X11 backend, not Gtk
     compiler: ["gcc@8.5.0"]
+    externals:
+      - spec: "perl@5.26.3"
+        prefix: "/usr/bin"
 
   jq:
     version: ["1.6"]
@@ -133,13 +136,10 @@ packages:
   readline:
     version: ["8.2"]
     compiler: ["gcc@10.2.0"]
-  #
-  # NOTE: Variants are from the successful install on CentOS7
-  # But this presently does not produce a working TAU executable.
-  #  -- Bob Yantosca (14 Jun 2023)
+
   tau:
-    version: ["2.31"]
-    variants: "~adios2+binutils~comm~craycnl~cuda+elf+fortran~gasnet+io~level_zero+libdwarf+libunwind~likwid~mpi+ompt~opari~opencl+openmp+otf2+papi+pdt~phase~ppc64le~profileparam+pthreads~python~rocm~rocprofiler~roctracer~scorep~shmem~sqlite~x86_64"
+    version: ["2.32"]
+    variants: "+binutils~ompt+opari+openmp~otf2+papi~pdt+phase+pthreads"
     compiler: ["gcc@10.2.0"]
   #
   # Settings for all Spack-built packages

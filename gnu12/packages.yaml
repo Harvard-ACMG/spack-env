@@ -90,8 +90,11 @@ packages:
 
   emacs:
     version: ["28.2"]
-    variants: "+gtk+X"
+    variants: "+athena+X"     # NOTE: Builds with the X11 backend, not Gtk
     compiler: ["gcc@8.5.0"]
+    externals:
+      - spec: "perl@5.26.3"
+        prefix: "/usr/bin"
 
   jq:
     version: ["1.6"]
@@ -136,7 +139,7 @@ packages:
 
   tau:
     version: ["2.32"]
-    variants: "+openmp+ompt+pthread"
+    variants: "+ompt~opari+openmp~otf2+pdt+pthreads"
     compiler: ["gcc@12.2.0"]
   #
   # Settings for all Spack-built packages
