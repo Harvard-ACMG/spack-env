@@ -104,6 +104,10 @@ packages:
   parallel:
     version: ["20220522"]
     compiler: ["gcc@8.5.0"]
+
+  rclone:
+    version: ["1.62.2"]
+    compiler: ["gcc@8.5.0"]
   #
   # Specs for packages that will be built with Spack.
   # These must be with gcc@10.2.0.
